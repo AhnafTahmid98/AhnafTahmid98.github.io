@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahnaf Tahmid — Robotics & AI Engineer</title>
+  <meta name="description" content="Ahnaf Tahmid — IoT engineer building intelligent real-world systems at the intersection of ROS 2 robotics, LLM integration, and embedded hardware.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23ff5722'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- Background 3D Canvas -->
+  <canvas id="bg3d"></canvas>
+
+  <!-- Navigation -->
+  <nav>
+    <span class="logo">Ahnaf<em>.</em></span>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:ahnaftahmid40@gmail.com" class="nav-cta">Get in touch</a>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section id="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-left r">
+            <div class="hero-kicker">
+              <span class="hk-dot"></span>Available for new opportunities
+            </div>
+            <h1 class="hero-h1">
+              Robotics &<br>AI engineer<br>
+              <em>building intelligent</em><br>
+              <span class="alt">real-world systems.</span>
+            </h1>
+            <p class="hero-sub">
+              I'm <strong>Ahnaf Tahmid</strong> — an IoT engineer working at the intersection of
+              <strong>ROS 2 robotics</strong>, <strong>LLM integration</strong>, and
+              <strong>embedded hardware</strong>. Currently building Robot Savo, an intelligent service robot.
+            </p>
+            <div class="hero-meta">
+              <span>IoT Student</span><span class="div"></span>
+              <span>Savonia UAS</span><span class="div"></span>
+              <span>2023 — Present</span>
+            </div>
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-prim">
+                View selected work
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M7 7h10v10"/>
+                </svg>
+              </a>
+              <a href="https://github.com/AhnafTahmid98" target="_blank" class="btn btn-sec">GitHub</a>
+              <a href="https://linkedin.com/in/ahnaf-tahmid98" target="_blank" class="btn-link">LinkedIn ↗</a>
+            </div>
+          </div>
+
+          <!-- Hero 3D Robot -->
+          <div class="hero-3d-wrap r">
+            <canvas id="robot3d"></canvas>
+            <div class="hero-3d-label">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12a9 9 0 11-6.219-8.56"/>
+              </svg>
+              Drag to rotate · 3D
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech marquee -->
+        <div class="marquee">
+          <div class="mq-track">
+            <span>ROS 2</span><span>LLM Integration</span><span>Python</span><span>FastAPI</span>
+            <span>Docker</span><span>Embedded Linux</span><span>Prompt Engineering</span>
+            <span>Conversational AI</span><span>Raspberry Pi</span><span>STT / TTS</span>
+            <span>ROS 2</span><span>LLM Integration</span><span>Python</span><span>FastAPI</span>
+            <span>Docker</span><span>Embedded Linux</span><span>Prompt Engineering</span>
+            <span>Conversational AI</span><span>Raspberry Pi</span><span>STT / TTS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section id="about" class="sec-bg">
+      <div class="wrap">
+        <div class="sec-head r">
+          <h2>About <em>me</em></h2>
+          <span class="sec-num">01 — Profile</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-text r">
+            <p>I'm an <strong>IoT and software engineering student</strong> with hands-on experience building <em>Robot Savo</em> — an intelligent robotics platform combining LLM integration, prompt engineering, conversational AI, ROS 2, Python, Docker, and real-hardware testing.</p>
+            <p>I'm drawn to the challenge of making systems that are <strong>reliable and intelligent in the real world</strong> — not just in simulation. My work spans robot-side embedded software, AI backend servers, mobile applications, and autonomous navigation.</p>
+            <p>Long-term, I want to contribute to meaningful engineering projects where <strong>software, hardware, and intelligence</strong> come together — in robotics engineering, embedded development, and AI-powered automation.</p>
+          </div>
+          <div class="tilt-wrap r">
+            <div class="about-aside tilt">
+              <div class="aa-row">
+                <span class="aa-key">EDUCATION</span>
+                <span class="aa-val">BSc Internet of Things<small>Savonia UAS · 2023–Present</small></span>
+              </div>
+              <div class="aa-row">
+                <span class="aa-key">FOCUS</span>
+                <span class="aa-val">Robotics & AI<small>ROS 2 · LLM · Embedded</small></span>
+              </div>
+              <div class="aa-row">
+                <span class="aa-key">EMAIL</span>
+                <span class="aa-val" style="font-size:12px;font-family:var(--mono);font-weight:400">ahnaftahmid40@gmail.com</span>
+              </div>
+              <div class="aa-row">
+                <span class="aa-key">EXPERIENCE</span>
+                <span class="aa-val">3+ Real Systems<small>From design to hardware</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ WORK ═══════════════ -->
+    <section id="work">
+      <div class="wrap">
+        <div class="sec-head r">
+          <h2>Selected <em>work</em></h2>
+          <span class="sec-num">02 — Projects & demos</span>
+        </div>
+
+        <!-- Photo + Demo video -->
+        <div class="video-pair r" style="margin-bottom:2rem; display:flex; gap:2rem; align-items:stretch;">
+
+          <!-- About me — profile photo -->
+          <div class="tilt-wrap" style="flex:1;"><div class="vc tilt">
+            <img src="media/profile.jpg" alt="Ahnaf Tahmid" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+            <div class="v-meta">
+              <div class="vm-t">About me</div>
+              <div class="vm-s">My portfolio photo</div>
+            </div>
+          </div></div>
+
+          <!-- Robot Savo demo video -->
+          <div class="tilt-wrap" style="flex:1;"><div class="vc tilt">
+            <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;">
+              <iframe src="https://www.youtube.com/embed/8c3VNYZ31A4" title="Robot Savo demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:8px;"></iframe>
+            </div>
+            <div class="v-meta">
+              <div class="vm-t">Robot Savo in action</div>
+              <div class="vm-s">Real-hardware demonstration of the platform</div>
+            </div>
+          </div></div>
+        </div>
+
+        <!-- Project list -->
+        <div class="proj-list">
+
+          <!-- Featured: Robot Savo -->
+          <div class="tilt-wrap r"><div class="pj featured tilt">
+            <img src="media/robot-savo.jpg" alt="Robot Savo" class="pj-media" style="width:100%; height:100%; object-fit:fill; border-radius:8px;">
+            <div class="pj-body">
+              <span class="pj-tag">● Featured project</span>
+              <h3 class="pj-name">Robot Savo<br><em>Intelligent robotics platform.</em></h3>
+              <div class="pj-stack">
+                <span class="pst">Python</span><span class="pst">C++</span><span class="pst">ROS 2</span>
+                <span class="pst">FastAPI</span><span class="pst">Docker</span><span class="pst">LLM</span>
+                <span class="pst">STT/TTS</span>
+              </div>
+              <p class="pj-desc">A real-world service robot designed and developed from the ground up — combining speech interaction, LLM-based reasoning, and robot-side execution.</p>
+              <ul class="pj-bullets">
+                <li>End-to-end STT → LLM → TTS pipeline for natural spoken interaction</li>
+                <li>Modular LLM server with FastAPI, session handling, and structured JSON outputs</li>
+                <li>Designed prompts for safe, structured, task-specific AI responses</li>
+                <li>Integrated perception, safety, UI, and real-hardware ROS 2 components</li>
+              </ul>
+              <a href="https://github.com/AhnafTahmid98/Savo_Pi" target="_blank" class="pj-link">
+                View on GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div></div>
+
+          <!-- Health Monitor -->
+          <div class="tilt-wrap r"><div class="pj standard tilt">
+            <iframe src="https://www.youtube.com/embed/rH3Jef0s76M" title="Health Monitor demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%; height:100%; border-radius:8px;"></iframe>
+            <div class="pj-body">
+              <span class="pj-tag">● Mobile + IoT</span>
+              <h3 class="pj-name">Health Monitoring <em>System</em></h3>
+              <div class="pj-stack">
+                <span class="pst">Flutter</span><span class="pst">Raspberry Pi</span>
+                <span class="pst">REST APIs</span><span class="pst">MQTT</span><span class="pst">SQLite</span>
+              </div>
+              <p class="pj-desc">A connected mobile system for collecting, storing, and visualizing patient sensor data — designed end-to-end from the embedded layer to the mobile interface.</p>
+              <a href="https://github.com/AhnafTahmid98/Patient_Health_Monitoring_app" target="_blank" class="pj-link">
+                View on GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div></div>
+
+          <!-- LLM Server -->
+          <div class="tilt-wrap r"><div class="pj standard tilt">
+            <div class="pj-media" onclick="trig('llmF')">
+              <input type="file" id="llmF" accept="image/*,video/*" style="display:none" onchange="loadM(event,'llmV','llmI')">
+              <video id="llmV" controls style="display:none"></video>
+              <img id="llmI" style="display:none" alt="">
+              <div class="vplay">▶</div>
+              <div class="vlbl">Upload server media</div>
+            </div>
+            <div class="pj-body">
+              <span class="pj-tag">● AI backend</span>
+              <h3 class="pj-name">Savo LLM <em>Server</em></h3>
+              <div class="pj-stack">
+                <span class="pst">Python</span><span class="pst">FastAPI</span>
+                <span class="pst">Docker</span><span class="pst">LLM</span>
+                <span class="pst">Prompt Engineering</span>
+              </div>
+              <p class="pj-desc">The AI backend powering Robot Savo — handling intelligent response generation, navigation reasoning, structured outputs, and session management for the robot.</p>
+              <a href="https://github.com/AhnafTahmid98/Savo_LLM_Server" target="_blank" class="pj-link">
+                View on GitHub
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M7 17L17 7M7 7h10v10"/>
+                </svg>
+              </a>
+            </div>
+          </div></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SKILLS (3D) ═══════════════ -->
+    <section id="skills" class="sec-bg">
+      <div class="wrap">
+        <div class="sec-head r">
+          <h2>What I <em>work with</em></h2>
+          <span class="sec-num">03 — Capabilities</span>
+        </div>
+
+        <!-- TIER 1: AI + Robotics -->
+        <div class="sk-hero-row r">
+
+          <!-- AI Neural Network -->
+          <div class="sk-scene-card">
+            <div class="sk-corner">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12a9 9 0 11-6.219-8.56"/>
+              </svg>LIVE · 3D
+            </div>
+            <div class="sk-readout">
+              <div class="row"><span>SYSTEM</span><span class="v">NEURAL_NET</span></div>
+              <div class="row"><span>STATUS</span><span class="v">ACTIVE</span></div>
+            </div>
+            <canvas class="sk-scene-canvas" id="aiCanvas"></canvas>
+            <div class="sk-scene-body">
+              <div class="sk-scene-tag">Priority 01 · Core focus</div>
+              <h3 class="sk-scene-title">AI &<br><em>software systems.</em></h3>
+              <p class="sk-scene-desc">My core area — building intelligent backends, conversational AI, and LLM integrations that ship to real hardware.</p>
+              <div class="sk-scene-tags">
+                <span class="tg">LLM Integration</span><span class="tg">Prompt Engineering</span>
+                <span class="tg">Conversational AI</span><span class="tg">Intent Routing</span>
+                <span class="tg">FastAPI</span><span class="tg">REST APIs</span>
+                <span class="tg">Docker</span><span class="tg">STT / TTS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Robotics -->
+          <div class="sk-scene-card">
+            <div class="sk-corner">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12a9 9 0 11-6.219-8.56"/>
+              </svg>LIVE · 3D
+            </div>
+            <div class="sk-readout">
+              <div class="row"><span>SYSTEM</span><span class="v">ROS2_NODE</span></div>
+              <div class="row"><span>STATUS</span><span class="v">CONNECTED</span></div>
+            </div>
+            <canvas class="sk-scene-canvas" id="roboCanvas"></canvas>
+            <div class="sk-scene-body">
+              <div class="sk-scene-tag">Priority 02 · Core focus</div>
+              <h3 class="sk-scene-title">Robotics &<br><em>embedded systems.</em></h3>
+              <p class="sk-scene-desc">Hardware-software integration with ROS 2, real sensors, motor control, and full robot platforms validated on real hardware.</p>
+              <div class="sk-scene-tags">
+                <span class="tg">ROS 2</span><span class="tg">Raspberry Pi</span>
+                <span class="tg">Sensor Integration</span><span class="tg">Motor Control</span>
+                <span class="tg">GPS / IMU</span><span class="tg">Telemetry</span>
+                <span class="tg">Real-hardware Testing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIER 2: Supporting 3D -->
+        <div class="sk-support-grid r">
+
+          <div class="sk-sc">
+            <div class="sk-sc-corner">3D</div>
+            <canvas class="sk-sc-canvas" id="codeCanvas"></canvas>
+            <div class="sk-sc-body">
+              <div class="sk-sc-num">// 03</div>
+              <div class="sk-sc-title">Programming<br>languages</div>
+              <div class="sk-sc-progress">
+                <div class="sk-sc-bar"><div class="sk-sc-bar-fill"></div></div>
+                <div class="sk-sc-meta"><span>PROFICIENCY</span><span>EXPERT · 7 LANGS</span></div>
+              </div>
+              <div class="sk-sc-tags">
+                <span class="tg">Python</span><span class="tg">C++</span><span class="tg">C</span>
+                <span class="tg">Kotlin</span><span class="tg">Dart</span><span class="tg">JS</span><span class="tg">SQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sk-sc">
+            <div class="sk-sc-corner">3D</div>
+            <canvas class="sk-sc-canvas" id="phoneCanvas"></canvas>
+            <div class="sk-sc-body">
+              <div class="sk-sc-num">// 04</div>
+              <div class="sk-sc-title">Mobile<br>development</div>
+              <div class="sk-sc-progress">
+                <div class="sk-sc-bar"><div class="sk-sc-bar-fill"></div></div>
+                <div class="sk-sc-meta"><span>PROFICIENCY</span><span>ADVANCED</span></div>
+              </div>
+              <div class="sk-sc-tags">
+                <span class="tg">Flutter</span><span class="tg">Android</span>
+                <span class="tg">Compose</span><span class="tg">MQTT</span><span class="tg">SQLite</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sk-sc">
+            <div class="sk-sc-corner">3D</div>
+            <canvas class="sk-sc-canvas" id="gearCanvas"></canvas>
+            <div class="sk-sc-body">
+              <div class="sk-sc-num">// 05</div>
+              <div class="sk-sc-title">Tooling &<br>infrastructure</div>
+              <div class="sk-sc-progress">
+                <div class="sk-sc-bar"><div class="sk-sc-bar-fill"></div></div>
+                <div class="sk-sc-meta"><span>PROFICIENCY</span><span>EXPERT</span></div>
+              </div>
+              <div class="sk-sc-tags">
+                <span class="tg">Git</span><span class="tg">Linux</span>
+                <span class="tg">VS Code</span><span class="tg">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIER 3: Engineering Practice -->
+        <div class="sk-eng-strip r">
+          <canvas class="sk-eng-canvas" id="engCanvas"></canvas>
+          <div class="sk-eng-body">
+            <div class="sk-eng-head-row">
+              <div>
+                <div class="sk-eng-num">// 06</div>
+                <div class="sk-eng-title">Engineering practice</div>
+              </div>
+              <span class="sk-eng-corner-flag">ARCH · 3D</span>
+            </div>
+            <div class="sk-eng-tags">
+              <span class="tg">Technical Documentation</span>
+              <span class="tg">System Architecture</span>
+              <span class="tg">Debugging</span>
+              <span class="tg">Independent Problem-solving</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="tilt-wrap r"><div class="contact-card tilt">
+          <div class="cc-kicker">— GET IN TOUCH</div>
+          <h2 class="cc-h">Let's build something<br><em>genuinely intelligent.</em></h2>
+          <p class="cc-sub">Open to internships, thesis collaborations, and engineering roles in robotics, AI, and embedded systems.</p>
+          <div class="cc-cta">
+            <a href="mailto:ahnaftahmid40@gmail.com" class="btn btn-prim">
+              Send me an email
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M7 17L17 7M7 7h10v10"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/ahnaf-tahmid98" target="_blank" class="btn btn-sec">Connect on LinkedIn</a>
+          </div>
+          <div class="contact-grid">
+            <a href="mailto:ahnaftahmid40@gmail.com" class="cg-cell">
+              <span class="cg-key">EMAIL</span>
+              <span class="cg-val">ahnaftahmid40@gmail.com</span>
+            </a>
+            <div class="cg-cell">
+              <span class="cg-key">PHONE</span>
+              <span class="cg-val">+358 413 122 956</span>
+            </div>
+            <a href="https://github.com/AhnafTahmid98" target="_blank" class="cg-cell">
+              <span class="cg-key">GITHUB</span>
+              <span class="cg-val">AhnafTahmid98 ↗</span>
+            </a>
+            <a href="https://linkedin.com/in/ahnaf-tahmid98" target="_blank" class="cg-cell">
+              <span class="cg-key">LINKEDIN</span>
+              <span class="cg-val">ahnaf-tahmid ↗</span>
+            </a>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <span>© 2026 Ahnaf Tahmid</span>
+    <span>Designed & built with <span class="heart">●</span> precision</span>
+  </footer>
+
+  <!-- ═══════════════ CHATBOT ═══════════════ -->
+  <button class="chat-fab" id="chatFab" aria-label="Open chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+    <span class="chat-tooltip">Ask me anything about Ahnaf</span>
+  </button>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-head">
+      <div class="chat-avatar">A</div>
+      <div class="chat-info">
+        <div class="chat-name">Ahnaf's AI Assistant</div>
+        <div class="chat-status">Online · Powered by Claude</div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot">
+        <div class="msg-bubble">👋 Hi there! I'm Ahnaf's AI assistant. Ask me anything about his <strong>projects</strong>, <strong>skills</strong>, <strong>experience</strong>, or how to <strong>get in touch</strong>.</div>
+      </div>
+    </div>
+    <div class="chat-suggestions" id="chatSuggestions">
+      <button class="sugg" data-q="What does Ahnaf do?">What does he do?</button>
+      <button class="sugg" data-q="Tell me about Robot Savo">Tell me about Robot Savo</button>
+      <button class="sugg" data-q="What are his skills?">What are his skills?</button>
+      <button class="sugg" data-q="How can I contact him?">How to contact?</button>
+    </div>
+    <div class="chat-input-wrap">
+      <form class="chat-form" id="chatForm">
+        <textarea class="chat-input" id="chatInput" placeholder="Ask anything about Ahnaf..." rows="1"></textarea>
+        <button type="submit" class="chat-send" id="chatSend" aria-label="Send">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="chat-foot">AI may make mistakes · For accurate info, contact Ahnaf directly</div>
+  </div>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- App Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/hero-robot.js"></script>
+  <script src="js/skills-scenes.js"></script>
+  <script src="js/chatbot.js"></script>
+
+</body>
+</html>
