@@ -1,216 +1,243 @@
-# Ahnaf Tahmid — Portfolio
+# Ahnaf Tahmid — Personal Portfolio
 
-A 3D interactive portfolio website with Three.js visuals, an AI chatbot, and image/video upload slots.
+[![Live Site](https://img.shields.io/badge/Live_Site-ahnaftahmid98.github.io-ff5722?style=for-the-badge)](https://ahnaftahmid98.github.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/ahnaf-tahmid98)
+[![Email](https://img.shields.io/badge/Email-ahnaftahmid40%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahnaftahmid40@gmail.com)
+
+> A 3D interactive portfolio built from scratch — showcasing my work in robotics, AI integration, and embedded systems.
+
+**Live Site:** [ahnaftahmid98.github.io](https://ahnaftahmid98.github.io)
 
 ---
 
-## 📁 Folder Structure
+## About This Project
+
+This is my personal portfolio website. I built it to go beyond a static resume — something that actually demonstrates the skills I talk about. Every 3D scene is hand-written with Three.js, the AI chatbot is powered by Claude and trained on my background, and the whole thing runs with zero frameworks or build steps.
+
+If you're here to evaluate me for a role: I'd recommend checking out the **Robot Savo** project on the live site first — it's the most representative of the work I care about.
+
+---
+
+## What's Inside
+
+- **Hero section** with an interactive 3D robot I modeled in code
+- **6 unique 3D visualizations** in the skills section — neural network, robot, code blocks, mobile UI, gears, and system architecture (all draggable)
+- **AI chatbot** powered by Claude Sonnet that answers visitor questions about my background
+- **Ambient 3D particle field** background
+- **Project showcase** with real work: Robot Savo, Savo LLM Server, Health Monitoring System
+- Fully responsive across desktop, tablet, and mobile
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+
+ -------|------------|
+| Structure | HTML5 |
+| Styling | CSS3 (custom, no frameworks) |
+| 3D Graphics | Three.js (r128) |
+| Interactivity | Vanilla JavaScript (ES6+) |
+| AI Chatbot | Anthropic Claude API via Cloudflare Workers |
+| Typography | Instrument Serif · Inter · JetBrains Mono |
+| Hosting | GitHub Pages |
+
+**Zero frameworks. Zero build step. Just the fundamentals, done well.**
+
+---
+
+## Project Structure
 
 ```text
-Ahnaf's portfolio/
-├── index.html              ← The main HTML file (open this in a browser)
-├── README.md               ← This file
+.
+├── index.html              # Main entry point
+├── README.md               # You're reading it
 ├── css/
-│   ├── main.css            ← All main styles (layout, components, responsive)
-│   └── chatbot.css         ← Chatbot panel styles
+│   ├── main.css            # Layout, components, responsive design
+│   └── chatbot.css         # AI chatbot panel styling
 ├── js/
-│   ├── main.js             ← Scroll reveal, file uploads, 3D tilt
-│   ├── background.js       ← 3D particle background
-│   ├── hero-robot.js       ← Hero section 3D robot
-│   ├── skills-scenes.js    ← 6 x 3D skill scenes
-│   └── chatbot.js          ← AI chatbot logic
+│   ├── main.js             # Scroll reveal, 3D tilt, file uploads
+│   ├── background.js       # Three.js particle field
+│   ├── hero-robot.js       # Hero section 3D robot model
+│   ├── skills-scenes.js    # Six 3D skill scenes
+│   └── chatbot.js          # Claude-powered AI assistant
 └── media/
-    └── (put your photos / videos here)
+    └── (project photos and videos)
 ```
 
-Clean separation by language — HTML in `.html`, CSS in `/css`, JS in `/js`, media in `/media`. Easy to maintain.
+I deliberately separated concerns by file — HTML handles structure, CSS handles presentation, JavaScript handles behavior. Each 3D scene lives in its own module. This makes the codebase easy to read, maintain, and extend.
 
 ---
 
-## 🚀 Quick Deploy (5 minutes)
+## Running Locally
 
-### Option 1: GitHub Pages (FREE — Recommended)
+Since this is pure HTML/CSS/JS, you have options:
 
-1. Create a new GitHub repo named exactly `AhnafTahmid98.github.io`
-2. Upload **the entire folder contents** (index.html + css/ + js/ + media/) to the repo
-3. Go to **Settings → Pages**
-4. Source: `main` branch / root folder → **Save**
-5. Your site goes live at **<https://ahnaftahmid98.github.io>**
+**Option 1 — Just open the file:**
 
-### Option 2: Netlify (also FREE)
+```bash
+git clone git@github.com:AhnafTahmid98/AhnafTahmid98.github.io.git
+cd AhnafTahmid98.github.io
+# Double-click index.html, or open it in any browser
+```
 
-1. Go to [netlify.com/drop](https://app.netlify.com/drop)
-2. Drag the **entire portfolio folder** onto the page
-3. You get a URL like `https://your-name.netlify.app`
+**Option 2 — Local server (recommended for full features):**
 
-### Option 3: Vercel (also FREE)
+```bash
+# Python 3
+python3 -m http.server 8000
 
-1. Go to [vercel.com/new](https://vercel.com/new)
-2. Import the GitHub repo or drag & drop the folder
-3. Deploy
+# Node.js
+npx serve .
+```
 
----
-
-## 🖼️ Adding Your Photos and Videos
-
-### Option A: Click-to-upload (works now, resets on refresh)
-
-Open your site, click any upload slot, choose a file. It shows immediately — but only in that browser session.
-
-### Option B: Make them permanent (recommended for live site)
-
-1. Put your files in the `media/` folder:
-
-   ```text
-   media/
-   ├── profile.jpg
-   ├── robot-savo-demo.mp4
-   ├── robot-savo.jpg
-   ├── health-monitor.jpg
-   └── llm-server.png
-   ```
-
-2. In `index.html`, find the upload slot you want to replace. For example, to replace the About Me photo slot, find:
-
-   ```html
-   <div class="vslot" onclick="trig('introF')">
-     <input type="file" id="introF" accept="image/*" ...>
-     ...
-   </div>
-   ```
-
-3. Replace the whole `<div class="vslot">...</div>` with:
-
-   ```html
-   <div class="vslot" style="cursor:default">
-     <img src="media/profile.jpg" alt="Ahnaf Tahmid" style="display:block;opacity:1">
-   </div>
-   ```
-
-4. For videos, use:
-
-   ```html
-   <div class="vslot" style="cursor:default">
-     <video src="media/robot-savo-demo.mp4" controls style="display:block;opacity:1"></video>
-   </div>
-   ```
+Then visit `http://localhost:8000`.
 
 ---
 
-## 🤖 Setting Up the AI Chatbot
+## The AI Chatbot
 
-The chatbot needs a backend proxy to securely call the Claude API. **Never put your API key in the HTML** — others would steal it.
+The chatbot embedded in the bottom-right corner uses Anthropic's Claude API to answer questions about my background. To keep my API key secure, it routes through a Cloudflare Workers proxy rather than calling the API directly from the browser.
 
-### Easiest option: Cloudflare Workers (FREE)
+**System prompt:** Carefully engineered to only answer from verified facts about me — it refuses to fabricate details and redirects unknown questions to my email.
+
+**Architecture:**
+
+```text
+Browser → Cloudflare Worker (proxy) → Anthropic API → Claude Sonnet → Response
+```
+
+Full setup instructions for replicating this are at the bottom of this README.
+
+---
+
+## Design Philosophy
+
+A few decisions I made intentionally:
+
+- **Dark background with a single warm accent** — orange (`#ff5722`) reserved for emphasis only, never decoration. Keeps focus on content.
+- **Editorial typography** — Instrument Serif italic for headings, paired with Inter for body and JetBrains Mono for technical details. Feels more like a magazine than a template.
+- **Real 3D, not static images** — because I work in robotics and AI. If my portfolio doesn't demonstrate technical depth visually, the message falls flat.
+- **Subtle grain texture overlay** — adds warmth and depth without being loud.
+- **No generic stock animations** — every motion serves a purpose.
+
+---
+
+## Deployment
+
+Hosted on **GitHub Pages**, served directly from the `master` branch. Automatically rebuilds on push.
+
+For future visitors interested in setting up something similar:
+
+### GitHub Pages (what I use)
+
+1. Create a repo named `<your-username>.github.io`
+2. Push this code to the `master` branch
+3. Settings → Pages → Source: `master` / `/ (root)`
+4. Live in 60 seconds at `<your-username>.github.io`
+
+### Alternative hosts
+
+- [Netlify](https://netlify.com) — drag-and-drop the folder
+- [Vercel](https://vercel.com) — import the GitHub repo
+- Any static file host will work
+
+---
+
+## Replicating the Chatbot
+
+If you want to build your own AI chatbot proxy:
+
+### Setup Guide
 
 1. **Get an Anthropic API key** at [console.anthropic.com](https://console.anthropic.com/)
 
-2. Go to [workers.cloudflare.com](https://workers.cloudflare.com/) and sign up (free)
-
-3. Create a new Worker and paste this code:
-
-```javascript
-export default {
-  async fetch(request, env) {
-    // CORS preflight
-    if (request.method === 'OPTIONS') {
-      return new Response(null, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'POST',
-          'Access-Control-Allow-Headers': 'Content-Type',
-        },
-      });
-    }
-
-    const body = await request.json();
-
-    const response = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': env.ANTHROPIC_API_KEY,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 500,
-        system: body.system,
-        messages: body.messages,
-      }),
-    });
-
-    const data = await response.json();
-    const reply = data.content?.filter(b => b.type === 'text').map(b => b.text).join('\n').trim() || '';
-
-    return new Response(JSON.stringify({ reply }), {
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-    });
-  },
-};
-```
-
-1. In the Worker's **Settings → Variables**, add:
-   - Name: `ANTHROPIC_API_KEY`
-   - Value: your Anthropic API key (click "Encrypt")
-
-2. Save and deploy. You'll get a URL like `https://portfolio-chat.your-name.workers.dev`
-
-3. **Open `js/chatbot.js`** and change this line (near the top):
+2. **Create a Cloudflare Worker** at [workers.cloudflare.com](https://workers.cloudflare.com/) and paste this code:
 
    ```javascript
-   const CHATBOT_ENDPOINT = "YOUR_BACKEND_URL_HERE";
+   export default {
+     async fetch(request, env) {
+       if (request.method === 'OPTIONS') {
+         return new Response(null, {
+           headers: {
+             'Access-Control-Allow-Origin': '*',
+             'Access-Control-Allow-Methods': 'POST',
+             'Access-Control-Allow-Headers': 'Content-Type',
+           },
+         });
+       }
+
+       const body = await request.json();
+       const response = await fetch('https://api.anthropic.com/v1/messages', {
+         method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+           'x-api-key': env.ANTHROPIC_API_KEY,
+           'anthropic-version': '2023-06-01',
+         },
+         body: JSON.stringify({
+           model: 'claude-sonnet-4-20250514',
+           max_tokens: 500,
+           system: body.system,
+           messages: body.messages,
+         }),
+       });
+
+       const data = await response.json();
+       const reply = data.content
+         ?.filter(b => b.type === 'text')
+         .map(b => b.text)
+         .join('\n')
+         .trim() || '';
+
+       return new Response(JSON.stringify({ reply }), {
+         headers: {
+           'Content-Type': 'application/json',
+           'Access-Control-Allow-Origin': '*',
+         },
+       });
+     },
+   };
    ```
 
-   to your Worker URL:
+3. In Worker Settings → Variables, add `ANTHROPIC_API_KEY` (encrypted).
+
+4. Update `js/chatbot.js`:
 
    ```javascript
-   const CHATBOT_ENDPOINT = "https://portfolio-chat.your-name.workers.dev";
+   const CHATBOT_ENDPOINT = "https://your-worker.your-name.workers.dev";
    ```
 
-4. Redeploy your portfolio. Chatbot now works! 🎉
+---
+
+## About Me
+
+I'm an **IoT and software engineering student** working on real-world robotics platforms — currently building **Robot Savo**, a service robot that combines ROS 2, embedded hardware, and LLM-based reasoning into a cohesive system.
+
+I'm interested in projects where software, hardware, and intelligence come together, and I'm actively looking for opportunities in robotics engineering, embedded development, and AI-powered automation.
+
+If you'd like to work together, the chatbot on the live site can answer most questions — or just reach out directly.
 
 ---
 
-## 🎨 Customizing
+## Contact
 
-### Change the accent color
+| | |
 
-Open `css/main.css`, find `:root {`, and change:
-
-```css
---accent: #ff5722;   /* main orange */
---accent2: #ff8a65;  /* lighter hover */
-```
-
-### Update the chatbot knowledge
-
-Open `js/chatbot.js`, find the `AHNAF_CONTEXT` constant, and edit what the bot knows about you.
-
-### Add a new project
-
-Open `index.html`, find the `<div class="proj-list">` section. Copy any `.pj.standard` block and edit its content.
+|---|---|
+| 📧 Email | [ahnaftahmid40@gmail.com](mailto:ahnaftahmid40@gmail.com) |
+| 💼 LinkedIn | [linkedin.com/in/ahnaf-tahmid98](https://linkedin.com/in/ahnaf-tahmid98) |
+| 💻 GitHub | [@AhnafTahmid98](https://github.com/AhnafTahmid98) |
+| 🎥 YouTube | [Robot Savo Channel](https://www.youtube.com/channel/UC5TYaQXKLNTr_u1foifFSUA) |
 
 ---
 
-## 🛠 Tech Stack
+## License
 
-- **Pure HTML / CSS / JS** — no frameworks, no build step
-- **Three.js** (CDN) — for all 3D scenes
-- **Google Fonts** — Instrument Serif, Inter, JetBrains Mono
-- **Anthropic Claude API** (optional) — for the chatbot
+Code is open for learning and inspiration. If you use this as a starting point for your own portfolio, a star ⭐ on the repo is appreciated but not required.
 
----
-
-## 📬 Contact
-
-- **Email:** <ahnaftahmid40@gmail.com>
-- **GitHub:** [@AhnafTahmid98](https://github.com/AhnafTahmid98)
-- **LinkedIn:** [ahnaf-tahmid98](https://linkedin.com/in/ahnaf-tahmid98)
+Personal photos, videos, and written content are © Ahnaf Tahmid.
 
 ---
 
-Built with ● precision.
+Built with ● precision · 2026
