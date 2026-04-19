@@ -8,7 +8,7 @@ Put your photos and videos here. Then reference them in `index.html`.
 - `robot-savo-demo.mp4` — Robot Savo demo video (optional if using a YouTube demo)
 - `robot-savo.jpg` — Robot Savo image
 - `health-monitor.jpg` — Health Monitor app screenshot (optional if using a YouTube demo)
-- `llm-server.png` — LLM Server architecture / screenshot
+- `llm-server.png` — LLM Server architecture / screenshot (optional if using a YouTube demo)
 
 If you prefer a YouTube demo instead of a local video, keep the corresponding MP4 file optional and update `index.html` to embed the YouTube link.
 
