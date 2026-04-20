@@ -49,6 +49,25 @@ function loadM(e, vId, iId) {
 window.trig = trig;
 window.loadM = loadM;
 
+// Scroll hint (show until the user reaches the page bottom)
+const scrollHint = document.querySelector('.scroll-hint');
+if (scrollHint) {
+  const updateHintVisibility = () => {
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const distanceToBottom = document.documentElement.scrollHeight - scrollBottom;
+    if (distanceToBottom > 120) {
+      scrollHint.classList.remove('hidden');
+    } else {
+      scrollHint.classList.add('hidden');
+    }
+  };
+
+  window.addEventListener('scroll', updateHintVisibility, { passive: true });
+  window.addEventListener('resize', updateHintVisibility);
+  scrollHint.addEventListener('click', () => setTimeout(updateHintVisibility, 100));
+  updateHintVisibility();
+}
+
 // ═══════════════ 3D TILT ═══════════════
 document.querySelectorAll('.tilt-wrap').forEach(wrap => {
   const card = wrap.querySelector('.tilt');
